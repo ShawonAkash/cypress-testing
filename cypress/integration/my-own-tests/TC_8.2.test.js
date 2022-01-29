@@ -12,10 +12,13 @@ describe('TC_8.2', () => {
     cy.contains('Sign in').click()
 
     cy.get('.icon-search > use').click({ force: true })
-    cy.get('#search-field').click({ force: true }).type('Tiger')
+    cy.xpath('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/ul[2]/li[1]/div[1]/form[1]/input[1]').click({ force: true }).type('Tiger')
+    cy.wait(500)
     cy.get('.search-icon-button').click({ force: true })
     cy.wait(20000)
-    cy.get('.photo-list-photo-interaction').first().click({ force: true })
+    cy.xpath('/html[1]/body[1]/div[1]/div[1]/main[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/a[1]').last().click({ force: true })
+    cy.xpath('/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[5]/div[1]/div[1]/a[1]/i[1]').click()
     //
   })
 })
+
